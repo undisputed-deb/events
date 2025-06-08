@@ -8,7 +8,6 @@ EventFlow is a modern, colorful, and highly interactive web application designed
     * **Live Demo (GIF):**
         ![EventFlow Homepage Live Demo](src/assets/Events.gif)
         *Witness the smooth animations, scroll-triggered effects, and interactive elements in action.*
-        *(**IMPORTANT:** Ensure your `Events.gif` file is located in `src/assets/`.)*
     * **Category Exploration:** Users can browse events by category through an animated section featuring colorful icons.
     * **Platform Benefits Showcase:** A dedicated section highlights EventFlow's core advantages with engaging 3D animated feature boxes.
     * **Intelligent Event Filtering & Shuffling:** Events are dynamically filtered and **shuffled based on the user's selected location** (e.g., from the header search bar), providing a personalized and randomized discovery experience while still displaying all relevant cards.
