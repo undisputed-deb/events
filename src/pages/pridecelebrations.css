@@ -1,0 +1,247 @@
+/* src/pages/pridecelebrations.css */
+
+/* Reuse styles from eventdetail.css and override/add as needed */
+
+.pride-event-detail-page {
+  background-color: var(--bg-color-light);
+  min-height: calc(100vh - 80px);
+  padding-bottom: var(--spacing-xl);
+  overflow-x: hidden;
+}
+
+/* Hero section with event image (reused from eventdetail.css) */
+.pride-event-detail-page .detail-hero {
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  color: var(--text-color-light);
+  box-shadow: var(--shadow-medium);
+  overflow: hidden;
+}
+
+.pride-event-detail-page .detail-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: var(--spacing-lg);
+  z-index: 1;
+}
+
+.pride-event-detail-page .detail-hero-content {
+  z-index: 2;
+  padding: 0 var(--spacing-md) var(--spacing-xl);
+  max-width: 900px;
+  text-align: left;
+}
+
+.pride-event-detail-page .event-title {
+  font-size: 3.8rem;
+  font-weight: 800;
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  line-height: 1.1;
+}
+
+.pride-event-detail-page .event-date-time,
+.pride-event-detail-page .event-location {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  opacity: 0.9;
+}
+
+.pride-event-detail-page .buy-tickets-button {
+  margin-top: var(--spacing-md);
+  font-size: 1.2rem;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: 50px;
+  /* Use a pride-themed gradient */
+  background: linear-gradient(45deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082); /* Rainbow gradient */
+  box-shadow: 0 6px 15px rgba(129, 64, 255, 0.4); /* Purple shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  background-size: 200% 200%; /* For animated gradient */
+  animation: gradientShift 5s infinite alternate; /* Animated gradient */
+}
+
+.pride-event-detail-page .buy-tickets-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(129, 64, 255, 0.6);
+  background-position: 100% 0%; /* Shift gradient on hover */
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+
+/* Main content and sidebar layout (reused) */
+.pride-event-detail-page .event-detail-content {
+  display: flex;
+  gap: var(--spacing-xl);
+  padding-top: var(--spacing-xl);
+  align-items: flex-start;
+}
+
+.pride-event-detail-page .detail-main {
+  flex: 3;
+}
+
+.pride-event-detail-page .detail-sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  position: sticky;
+  top: calc(var(--spacing-xl) + 80px);
+  align-self: flex-start;
+  min-width: 280px;
+}
+
+/* General section styling in main content (reused) */
+.pride-event-detail-page .event-description-section,
+.pride-event-detail-page .event-organizer-section,
+.pride-event-detail-page .event-agenda-section,
+.pride-event-detail-page .event-speakers-section,
+.pride-event-detail-page .event-faqs-section,
+.pride-event-detail-page .event-features-section {
+  background-color: var(--card-bg);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-light);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Section H2 headings (reused) */
+.pride-event-detail-page .event-description-section h2,
+.pride-event-detail-page .event-organizer-section h2,
+.pride-event-detail-page .event-agenda-section h2,
+.pride-event-detail-page .event-speakers-section h2,
+.pride-event-detail-page .event-faqs-section h2,
+.pride-event-detail-page .event-features-section h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-color);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: var(--spacing-sm);
+  text-align: left;
+}
+
+/* Agenda, Speakers, FAQs (reused) */
+.pride-event-detail-page .agenda-list li,
+.pride-event-detail-page .speaker-card,
+.pride-event-detail-page .faq-item {
+  /* Inherit styles from eventdetail.css or add specific overrides */
+}
+
+.pride-event-detail-page .agenda-time {
+  color: var(--primary-gradient-end); /* Consistent gradient start color */
+}
+
+.pride-event-detail-page .speaker-image {
+  border: 3px solid var(--primary-gradient-start); /* Pride color border */
+}
+
+.pride-event-detail-page .tag {
+  background-color: rgba(var(--secondary-color), 0.1);
+  color: var(--secondary-color); /* Use secondary color for tags */
+}
+
+.pride-event-detail-page .tag:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+}
+
+/* Organizer section (reused) */
+.pride-event-detail-page .button-secondary {
+  border-color: var(--secondary-color); /* Use secondary color for borders */
+  color: var(--secondary-color);
+}
+
+.pride-event-detail-page .button-secondary:hover {
+  background-color: var(--secondary-color);
+}
+
+
+/* Ticket Box & Share Box (reused) */
+.pride-event-detail-page .ticket-box,
+.pride-event-detail-page .share-box {
+  background-color: var(--card-bg);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-light);
+  text-align: center;
+}
+
+.pride-event-detail-page .event-price {
+  background: linear-gradient(to right, var(--secondary-color), #00e5ff); /* Cyan gradient for price */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+.pride-event-detail-page .share-icon {
+  background-color: var(--bg-color-light);
+  color: var(--text-color);
+}
+
+.pride-event-detail-page .share-icon:hover {
+  background-color: var(--accent-color); /* Use accent color on hover */
+  color: var(--text-color-light);
+}
+
+/* Feature Box Specifics for Pride Page */
+.pride-event-detail-page .event-features-section h2 {
+  background: linear-gradient(to right, #FF0000, #0000FF); /* Red to Blue gradient for Pride feature title */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pride-event-detail-page .feature-box {
+  background-color: var(--bg-color-light); /* Lighter background for features */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.pride-event-detail-page .feature-box:hover {
+  background-color: #f0f0f0;
+}
+
+.pride-event-detail-page .feature-icon {
+  color: var(--primary-gradient-end); /* Primary color for feature icons */
+}
+
+.pride-event-detail-page .feature-box:hover .feature-icon {
+  color: var(--secondary-color); /* Change color on hover */
+}
+
+
+/* Responsive adjustments (reused) */
+@media (max-width: 992px) {
+  .pride-event-detail-page .detail-hero { height: 350px; }
+  .pride-event-detail-page .event-title { font-size: 3rem; }
+  .pride-event-detail-page .event-date-time, .pride-event-detail-page .event-location { font-size: 1.1rem; }
+}
+
+@media (max-width: 768px) {
+  .pride-event-detail-page .detail-hero { height: 300px; }
+  .pride-event-detail-page .event-title { font-size: 2.5rem; }
+  .pride-event-detail-page .event-detail-content { flex-direction: column; }
+  .pride-event-detail-page .detail-sidebar { position: static; margin-top: var(--spacing-xl); min-width: unset; }
+}
+
+@media (max-width: 480px) {
+  .pride-event-detail-page .detail-hero { height: 250px; }
+  .pride-event-detail-page .event-title { font-size: 2rem; }
+  .pride-event-detail-page .buy-tickets-button { font-size: 1rem; padding: var(--spacing-sm) var(--spacing-lg); }
+}

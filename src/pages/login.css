@@ -1,0 +1,133 @@
+/* src/pages/login.css */
+
+.login-page {
+  background-color: var(--bg-color-light);
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-xl);
+  overflow-x: hidden;
+}
+
+.login-container {
+  background-color: var(--card-bg);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-medium);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.login-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+.login-header p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: var(--spacing-lg);
+}
+
+.toggle-switch {
+  display: flex;
+  border-radius: 50px;
+  overflow: hidden;
+  margin: 0 auto var(--spacing-lg);
+  border: 2px solid var(--border-color);
+  width: fit-content;
+}
+
+.toggle-switch button {
+  flex: 1;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.toggle-switch button.active {
+  background: linear-gradient(to right, var(--primary-gradient-start), var(--primary-gradient-end));
+  color: var(--text-color-light);
+  box-shadow: var(--shadow-light);
+}
+
+.login-form,
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.form-group label svg {
+  color: var(--primary-gradient-end);
+  font-size: 1.2rem;
+}
+
+.form-group input {
+  padding: var(--spacing-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--bg-color-light);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.form-group input:focus {
+  border-color: var(--primary-gradient-end);
+  box-shadow: 0 0 0 3px rgba(var(--primary-gradient-end), 0.2);
+  outline: none;
+}
+
+.login-button-submit,
+.signup-button-submit {
+  padding: var(--spacing-md);
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: var(--border-radius-sm);
+  align-self: center;
+  width: 100%;
+  max-width: 250px;
+  margin-top: var(--spacing-md);
+}
+
+.login-button-submit {
+  background: linear-gradient(to right, var(--primary-gradient-start), var(--primary-gradient-end));
+  color: var(--text-color-light);
+  box-shadow: var(--shadow-light);
+}
+
+.signup-button-submit {
+  background: linear-gradient(to right, var(--secondary-color), #00e5ff);
+  color: var(--text-color-light);
+  box-shadow: var(--shadow-light);
+}
+
+.login-button-submit:hover,
+.signup-button-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
